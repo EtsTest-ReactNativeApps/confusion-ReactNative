@@ -33,8 +33,8 @@ const mapDispatchToProps = dispatch => ({
 
 const MenuNavigatorItems = createStackNavigator({
     Menu: { screen: Menu ,
-        navigationOptions: ({ navigation }) => ({
-            headerLeft: <Icon name="menu" size={24} 
+    defaultNavigationOptions: ({ navigation }) => ({
+            headerLeft: () => <Icon name="menu" size={24} 
             color= 'white'
             onPress={ () => navigation.toggleDrawer() } />          
         })  
@@ -67,7 +67,7 @@ const HomeNavigatorItems = createStackNavigator({
         headerTitleStyle: {
             color: "#fff"            
         },
-        headerLeft: <Icon name="menu" size={24} 
+        headerLeft: () => <Icon name="menu" size={24} 
             color= 'white'
             onPress={ () => navigation.toggleDrawer() } />  
     })
@@ -86,7 +86,7 @@ const ContactUsNavigatorItems = createStackNavigator({
         headerTitleStyle: {
             color: "#512DA8"            
         },
-        headerLeft: <Icon name="menu" size={24} 
+        headerLeft: () => <Icon name="menu" size={24} 
             color= 'white'
             onPress={ () => navigation.toggleDrawer() } />  
     })
@@ -105,7 +105,7 @@ const AboutUsNavigatorItems = createStackNavigator({
         headerTitleStyle: {
             color: "#fff"            
         },
-        headerLeft: <Icon name="menu" size={24} 
+        headerLeft: () => <Icon name="menu" size={24} 
             color= 'white'
             onPress={ () => navigation.toggleDrawer() } />  
     })
@@ -139,7 +139,7 @@ const ReservationNavigatorItems = createStackNavigator({
             color: "#fff"            
         },
         headerTintColor: "#fff",
-        headerLeft: <Icon name="menu" size={24}
+        headerLeft: () => <Icon name="menu" size={24}
         iconStyle={{ color: 'white' }} 
         onPress={ () => navigation.navigate('DrawerToggle') } />    
     })
@@ -158,7 +158,7 @@ const FavoritesNavigatorItems = createStackNavigator({
             color: "#fff"            
         },
         headerTintColor: "#fff",
-        headerLeft: <Icon name="menu" size={24}
+        headerLeft: () => <Icon name="menu" size={24}
         iconStyle={{ color: 'white' }} 
         onPress={ () => navigation.navigate('DrawerToggle') } />    
     })
