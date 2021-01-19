@@ -12,6 +12,7 @@ import { DrawerItems } from 'react-navigation-drawer';
 import { Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { fetchDishes, fetchComments, fetchPromos, fetchLeaders } from '../redux/ActionCreators';
+import Reservation from './ReservationComponent';
 
 const mapStateToProps = state => {
     return {
@@ -126,6 +127,26 @@ const CustomDrawerContentComponent = (props) => (
     </ScrollView>
 );
 
+const ReservationNavigatorItems = createStackNavigator({
+    Reservation: { screen: Reservation }
+    }, {
+        defaultNavigationOptions: ({ navigation }) => ({
+        headerStyle: {
+            backgroundColor: "#512DA8"
+        },
+        headerTitleStyle: {
+            color: "#fff"            
+        },
+        headerTintColor: "#fff",
+        headerLeft: <Icon name="menu" size={24}
+        iconStyle={{ color: 'white' }} 
+        onPress={ () => navigation.navigate('DrawerToggle') } />    
+    })
+})
+
+const ReservationNavigator = createAppContainer(ReservationNavigatorItems);
+
+
 const MainNavigatorItems = createDrawerNavigator({
     Home: { 
         screen: HomeNavigator,
@@ -187,10 +208,27 @@ const MainNavigatorItems = createDrawerNavigator({
             ),
         }, 
     },
+    Reservation: { 
+        screen: ReservationNavigator,
+        navigationOptions: {
+            title: 'Reserve Table',
+            drawerLabel: 'Reserve Table',
+            drawerIcon: ({ tintColor, focused }) => (
+                <Icon
+                    name='cutlery'
+                    type='font-awesome'            
+                    size={24}
+                    iconStyle={{ color: tintColor }}
+                />
+            ),
+        }
+    }
 }, {
     drawerBackgroundColor: '#D1C4E9',
     contentComponent: CustomDrawerContentComponent
 });
+
+
 
 const MainNavigator = createAppContainer(MainNavigatorItems);
 
@@ -215,25 +253,25 @@ class Main extends Component {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+        flex: 1,
     },
     drawerHeader: {
-      backgroundColor: '#512DA8',
-      height: 140,
-      alignItems: 'center',
-      justifyContent: 'center',
-      flex: 1,
-      flexDirection: 'row'
+        backgroundColor: '#512DA8',
+        height: 140,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'row'
     },
     drawerHeaderText: {
-      color: 'white',
-      fontSize: 24,
-      fontWeight: 'bold'
+        color: 'white',
+        fontSize: 24,
+        fontWeight: 'bold'
     },
     drawerImage: {
-      margin: 10,
-      width: 80,
-      height: 60
+        margin: 10,
+        width: 80,
+        height: 60
     }
 });
 
