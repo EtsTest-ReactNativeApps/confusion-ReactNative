@@ -1,1 +1,1 @@
-export const baseUrl = "http://192.168.29.109:3001/";
+export const baseUrl = 'https://application-mock-server.loca.lt/';
