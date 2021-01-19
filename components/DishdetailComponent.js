@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, FlatList, Modal, Button,StyleSheet, Dimensions } from 'react-native';
+import { Text,Dimensions, View, ScrollView, FlatList, Modal, StyleSheet, Button, Alert, PanResponder } from 'react-native';
 import { Card, Icon, Rating, Input } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
@@ -23,24 +23,52 @@ function RenderDish(props) {
 
     const dish = props.dish;
     
-        if (dish != null) {
-            return(
-                <Animatable.View animation="fadeInDown" duration={2000} delay={1000} useNativeDriver={true}>
-                    <Card featuredTitle={dish.name} image={{uri: baseUrl+dish.image}}>
-                        <Text style={{margin: 10}}>
-                            {dish.description}
-                        </Text>
-                        <View style={styles.formRow}>
-                            <Icon raised reverse name={props.favorite?'heart':'heart-o'} type='font-awesome' color='#f50' onPress={() => props.favorite ? console.log('Already favorite') : props.onPress()}/>
-                            <Icon raised reverse name={'pencil'} type='font-awesome' color='#512DA8' onPress={() => props.onComment()}/>
-                        </View>
-                    </Card>
-                </Animatable.View>
-            );
+    const recognizeDrag = ({ moveX, moveY, dx, dy }) => {
+        if ( dx < -200 )
+            return true;
+        else
+            return false;
+    }
+
+    const panResponder = PanResponder.create({
+        onStartShouldSetPanResponder: (e, gestureState) => {
+            return true;
+        },
+        onPanResponderEnd: (e, gestureState) => {
+            console.log("pan responder end", gestureState);
+            if (recognizeDrag(gestureState))
+                Alert.alert(
+                    'Add Favorite',
+                    'Are you sure you wish to add ' + dish.name + ' to favorite?',
+                    [
+                    {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                    {text: 'OK', onPress: () => {props.favorite ? console.log('Already favorite') : props.onPress()}},
+                    ],
+                    { cancelable: false }
+                );
+
+            return true;
         }
-        else {
-            return(<View></View>);
-        }
+    })
+        
+    if (dish != null) {
+        return(
+            <Animatable.View animation="fadeInDown" duration={2000} delay={1000} useNativeDriver={true} {...panResponder.panHandlers}>
+                <Card featuredTitle={dish.name} image={{uri: baseUrl+dish.image}}>
+                    <Text style={{margin: 10}}>
+                        {dish.description}
+                    </Text>
+                    <View style={styles.formRow}>
+                        <Icon raised reverse name={props.favorite?'heart':'heart-o'} type='font-awesome' color='#f50' onPress={() => props.favorite ? console.log('Already favorite') : props.onPress()}/>
+                        <Icon raised reverse name={'pencil'} type='font-awesome' color='#512DA8' onPress={() => props.onComment()}/>
+                    </View>
+                </Card>
+            </Animatable.View>
+        );
+    }
+    else {
+        return(<View></View>);
+    }
 }
 
 function RenderComments(props) {
@@ -160,18 +188,18 @@ class Dishdetail extends Component {
 
 const styles = StyleSheet.create({
     formRow: {
-        alignItems: 'center',
-        flexDirection: 'row',
-        flex: 1,
-        marginLeft: Dimensions.get('window').width/4
+      alignItems: 'center',
+      flexDirection: 'row',
+      flex: 1,
+      marginLeft: Dimensions.get('window').width/4
     },
     modalText: {
-        fontSize: 18,
-        margin: 10
+      fontSize: 18,
+      margin: 10
     },
     modal: {
-        justifyContent: 'center',
-        margin: 20,
+      justifyContent: 'center',
+      margin: 20,
     }
 })
 
