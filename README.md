@@ -32,36 +32,36 @@ This is a react native application.
 
 ## Screenshots
 <p float="left">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/1.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/2.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/3.jpg" width="100">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/1.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/2.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/3.jpg" width="250">
 </p>
 <p float="left">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/4.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/5.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/6.jpg" width="100">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/4.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/5.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/6.jpg" width="250">
 </p>
 <p float="left">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/7.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/8.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/9.jpg" width="100">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/7.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/8.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/9.jpg" width="250">
 </p>
 <p float="left">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/10.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/11.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/12.jpg" width="100">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/10.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/11.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/12.jpg" width="250">
 </p>
 <p float="left">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/13.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/14.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/15.jpg" width="100">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/13.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/14.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/15.jpg" width="250">
 </p>
 <p float="left">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/16.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/17.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/18.jpg" width="100">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/16.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/17.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/18.jpg" width="250">
 </p>
 <p float="left">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/19.jpg" width="100">
-    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/20.png" width="100">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/19.jpg" width="250">
+    <Img src="https://github.com/shikhar2817/confusion-ReactNative/blob/main/components/images/screenShots/20.png" width="250">
 </p>
