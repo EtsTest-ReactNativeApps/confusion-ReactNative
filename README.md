@@ -1,6 +1,6 @@
 # confusion-ReactNative
 
-This is a react native application.
+This is a react native application build with expo SDK.
 
 ## Setting up project
 
@@ -27,7 +27,7 @@ This is a react native application.
 
 ### By installing apk
 
-1. Download the apk file from [Here](https://www.dropbox.com/s/6x1ah2suebl6xaf/confusion-282a63bfb3c24f868c482a4f8b307726-signed.apk?dl=0)
+1. Download the apk file from Apk Folder
 1. Install and Open the app
 
 ## Screenshots
