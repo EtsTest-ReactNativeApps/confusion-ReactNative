@@ -6,6 +6,7 @@ import ContactUs from "./ContactComponent";
 import AboutUs from "./AboutComponent";
 import Reservation from './ReservationComponent';
 import Favorites from './FavoriteComponent';
+import Login from './LoginComponent';
 import { View ,Platform, Text, ScrollView, Image, StyleSheet } from 'react-native';
 import { createAppContainer , SafeAreaView } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -73,6 +74,25 @@ const HomeNavigatorItems = createStackNavigator({
     })
 });
 const HomeNavigator = createAppContainer(HomeNavigatorItems);
+
+const LoginNavigatorItems = createStackNavigator({
+    Login: { screen: Login }
+},
+{
+    defaultNavigationOptions: ({ navigation }) => ({
+        headerStyle: {
+            backgroundColor: '#512DA8',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            color: "#fff"            
+        },
+        headerLeft: () => <Icon name="menu" size={24} 
+            color= 'white'
+            onPress={ () => navigation.toggleDrawer() } />  
+    })
+});
+const LoginNavigator = createAppContainer(LoginNavigatorItems);
 
 const ContactUsNavigatorItems = createStackNavigator({
     ContactUs: { screen: ContactUs }
@@ -168,6 +188,21 @@ const FavoritesNavigator = createAppContainer(FavoritesNavigatorItems);
 
 
 const MainNavigatorItems = createDrawerNavigator({
+    Login: { 
+        screen: LoginNavigator,
+        navigationOptions: {
+            title: 'Login',
+            drawerLabel: 'Login',
+            drawerIcon: ({ tintColor, focused }) => (
+                <Icon
+                name='sign-in'
+                type='font-awesome'            
+                size={24}
+                iconStyle={{ color: tintColor }}
+                />
+            ),
+        }
+    },
     Home: { 
         screen: HomeNavigator,
         navigationOptions: {
@@ -259,6 +294,7 @@ const MainNavigatorItems = createDrawerNavigator({
         }
     }
 }, {
+    initialRouteName: 'Home',
     drawerBackgroundColor: '#D1C4E9',
     contentComponent: CustomDrawerContentComponent
 });

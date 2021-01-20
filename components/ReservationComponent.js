@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Picker, Switch, Button, Modal, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, Picker, Switch, Button, Modal, ScrollView,Alert } from 'react-native';
 import DatePicker from 'react-native-datepicker';
+import * as Animatable from 'react-native-animatable';
 
 class Reservation extends Component {
 
@@ -25,6 +26,15 @@ class Reservation extends Component {
 
     handleReservation() {
         console.log(JSON.stringify(this.state));
+        Alert.alert(
+            'Your Reservation OK?',
+            'Number of Guests: ' + this.state.guests + '\nSmoking? '+ this.state.smoking +'\nDate and Time:' + this.state.date,
+            [
+            {text: 'Cancel', onPress: () => { console.log('Cancel Pressed'); this.resetForm();}, style: 'cancel'},
+            {text: 'OK', onPress: () => { this.resetForm(); }},
+            ],
+            { cancelable: false }
+        );
         this.toggleModal();
     }
 
@@ -40,6 +50,7 @@ class Reservation extends Component {
     render() {
         return(
             <ScrollView>
+                <Animatable.View animation="zoomIn" duration={1000} delay={500} useNativeDriver={true}>
                 <View style={styles.formRow}>
                 <Text style={styles.formLabel}>Number of Guests</Text>
                 <Picker
@@ -71,20 +82,19 @@ class Reservation extends Component {
                     format=''
                     mode="datetime"
                     placeholder="select date and Time"
-                    minDate="2017-01-01"
+                    minDate="2020-01-01"
                     confirmBtnText="Confirm"
                     cancelBtnText="Cancel"
                     customStyles={{
-                    dateIcon: {
-                        position: 'absolute',
-                        left: 0,
-                        top: 4,
-                        marginLeft: 0
-                    },
-                    dateInput: {
-                        marginLeft: 36
-                    }
-                    // ... You can check the source to find the other keys. 
+                        dateIcon: {
+                            position: 'absolute',
+                            left: 0,
+                            top: 4,
+                            marginLeft: 0
+                        },
+                        dateInput: {
+                            marginLeft: 36
+                        }
                     }}
                     onDateChange={(date) => {this.setState({date: date}) ; console.log(date);}}
                 />
@@ -97,7 +107,8 @@ class Reservation extends Component {
                     accessibilityLabel="Learn more about this purple button"
                     />
                 </View>
-                <Modal animationType = {"slide"} transparent = {false}
+                </Animatable.View>
+                {/* <Modal animationType = {"slide"} transparent = {false}
                     visible = {this.state.showModal}
                     onDismiss = {() => this.toggleModal() }
                     onRequestClose = {() => this.toggleModal() }>
@@ -113,7 +124,7 @@ class Reservation extends Component {
                             title="Close" 
                             />
                     </View>
-                </Modal>
+                </Modal> */}
             </ScrollView>
         );
     }
