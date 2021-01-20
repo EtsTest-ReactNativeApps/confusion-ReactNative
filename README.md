@@ -27,7 +27,7 @@ This is a react native application.
 
 ### By installing apk
 
-1. Download the apk file from [Here](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40shikhar2817/confusion-282a63bfb3c24f868c482a4f8b307726-signed.apk)
+1. Download the apk file from [Here](https://www.dropbox.com/s/6x1ah2suebl6xaf/confusion-282a63bfb3c24f868c482a4f8b307726-signed.apk?dl=0)
 1. Open the app
 
 ## Screenshots
