@@ -2451,6 +2451,11 @@ expo-asset@~8.2.1:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
+expo-calendar@~8.6.0:
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/expo-calendar/-/expo-calendar-8.6.0.tgz#06fc8768550d94948344a593b9d184808fba5266"
+  integrity sha512-giProL2KlRAUunSFMzEybv54AAlrgagEgijmyOnZ+KOviOYEqP4wh0J5/O8sBlpx6LDh5JDwNdNM6jl+8HHZ7g==
+
 expo-constants@~9.3.3:
   version "9.3.5"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-9.3.5.tgz#78085763e8ed100a5f2df7c682fd99631aa03d5e"
@@ -2481,6 +2486,11 @@ expo-font@~8.4.0:
   dependencies:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
+
+expo-image-manipulator@~8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/expo-image-manipulator/-/expo-image-manipulator-8.4.0.tgz#1cc6187e6f582e3bc08b8e2139a33469bdb5a0e5"
+  integrity sha512-9gje9wnFrNqMWGLK/fej3BmDnMPMjSmURJzCuVrHAkfQLGvhcW2dT8HIooQt+6/HDkiJ4pYI1X86mYTPiMV5Tw==
 
 expo-image-picker@~9.2.0:
   version "9.2.1"
